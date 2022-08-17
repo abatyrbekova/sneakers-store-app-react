@@ -1,1 +1,0 @@
-# sneakers-store-app-react
