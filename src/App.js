@@ -5,6 +5,55 @@ import Card from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
+const arr = [
+  {
+    title: "Men Nike Blazer Mid Suede",
+    price: 129.99,
+    imageURL: "/img/sneakers/1.jpg",
+  },
+  {
+    title: "Men Nike Air Max 270",
+    price: 129.99,
+    imageURL: "/img/sneakers/2.jpg",
+  },
+  {
+    title: "Men Nike Blazer Mid Suede",
+    price: 84.99,
+    imageURL: "/img/sneakers/3.jpg",
+  },
+  {
+    title: "Puma X Aka Boku Future Rider",
+    price: 89.99,
+    imageURL: "/img/sneakers/4.jpg",
+  },
+  {
+    title: "Men Under Armour Curry 8",
+    price: 151.99,
+    imageURL: "/img/sneakers/5.jpg",
+  },
+  { title: "Men Nike Kyrie 7", price: 112.99, imageURL: "/img/sneakers/6.jpg" },
+  {
+    title: "Men Jordan Air Jordan 11",
+    price: 107.99,
+    imageURL: "/img/sneakers/7.jpg",
+  },
+  {
+    title: "Men Nike LeBron XVIII",
+    price: 164.99,
+    imageURL: "/img/sneakers/8.jpg",
+  },
+  {
+    title: "Men Nike Lebron XVIII Low",
+    price: 139.99,
+    imageURL: "/img/sneakers/9.jpg",
+  },
+  {
+    title: "Men Nike Kyrie Flytrap IV",
+    price: 112.99,
+    imageURL: "/img/sneakers/10.jpg",
+  },
+];
+
 function App() {
   return (
     <div className="wrapper clear">
@@ -20,202 +69,14 @@ function App() {
           </div>
         </div>
         <div className="d-flex">
-          <Card />
-
-          {/* <div className="card">
-            <div className="favorite">
-              <img src="/img/unliked.svg" alt="unliked" />
-            </div>
-
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/1.jpg"
-              alt="sneakers1"
+          {arr.map((obj) => (
+            <Card
+              title={obj.title}
+              price={obj.price}
+              imageURL={obj.imageURL}
+              onClick={() => console.log(obj)}
             />
-            <h5>Men Nike Blazer Mid Suede</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>129,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div> */}
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/2.jpg"
-              alt="sneakers2"
-            />
-            <h5>Men Nike Air Max 270</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>129,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/3.jpg"
-              alt="sneakers3"
-            />
-            <h5>Men Nike Blazer Mid Suede</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>84,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/4.jpg"
-              alt="sneakers4"
-            />
-            <h5>Puma X Aka Boku Future Rider</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>89,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/5.jpg"
-              alt="sneakers5"
-            />
-            <h5>Men Under Armour Curry 8</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>151,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/6.jpg"
-              alt="sneakers6"
-            />
-            <h5>Men Nike Kyrie 7</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>112,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/7.jpg"
-              alt="sneakers7"
-            />
-            <h5>Men Jordan Air Jordan 11</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>107,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/8.jpg"
-              alt="sneakers8"
-            />
-            <h5>Men Nike LeBron XVIII</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>164,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/9.jpg"
-              alt="sneakers9"
-            />
-            <h5>Men Nike Lebron XVIII Low</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>139,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-
-          <div className="card">
-            <img
-              width={133}
-              height={112}
-              src="/img/sneakers/10.jpg"
-              alt="sneakers10"
-            />
-            <h5>Men Nike Kyrie Flytrap IV</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Price:</span>
-                <b>112,99 €</b>
-              </div>
-              <button className="button">
-                <img width={11} height={11} src="/img/plus.svg" alt="plus" />
-              </button>
-            </div>
-          </div>
-          
+          ))}
         </div>
       </div>
     </div>
