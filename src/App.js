@@ -55,10 +55,12 @@ const arr = [
 ];
 
 function App() {
+  const [cartOpened, setCartOpened] = React.useState(false);
+
   return (
     <div className="wrapper clear">
-      <Drawer />
-      <Header />
+      {cartOpened && <Drawer onClose={() => setCartOpened(false)} />}
+      <Header onClickCart={() => setCartOpened(true)} />
 
       <div className="content p-40">
         <div className="d-flex align-center justify-between mb-40">
@@ -74,7 +76,8 @@ function App() {
               title={obj.title}
               price={obj.price}
               imageURL={obj.imageURL}
-              onClick={() => console.log(obj)}
+              onFavorite={() => console.log("Added to Favorite")}
+              onPlus={() => console.log("Added to Bag")}
             />
           ))}
         </div>
