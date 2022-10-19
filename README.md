@@ -1,1 +1,1 @@
-"Sneakers-store-app-react" - my project created in React.
+"Sneakers-store-app-react" - our final project.
